@@ -2,10 +2,10 @@ import { useEffect } from 'react';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import { Row, Col } from 'react-grid-system';
 
-import { Botao } from '../../componentes/Botao/Botao';
-import GrupoRadio from '../../componentes/Radio/GrupoRadio';
-import CabecalhoCadastro from '../../componentes/CabecalhoCadastro/CabecalhoCadastro';
-import { useCadastroUsuarioContexto } from '../../contexto/CadastroUsuario';
+import { Botao } from 'componentes/Botao/Botao';
+import GrupoRadio from 'componentes/Radio/GrupoRadio';
+import CabecalhoCadastro from 'componentes/CabecalhoCadastro/CabecalhoCadastro';
+import { useCadastroUsuarioContexto } from 'contexto/CadastroUsuario';
 
 const opcoes = [
     {

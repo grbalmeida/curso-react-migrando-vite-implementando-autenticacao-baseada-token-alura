@@ -3,10 +3,10 @@ import { Row, Col } from 'react-grid-system';
 
 import cliente from './assets/cliente.png';
 import freela from './assets/freela.png';
-import { Link } from '../../componentes/Link/Link';
-import { Tipografia } from '../../componentes/Tipografia/Tipografia';
-import CabecalhoCadastro from '../../componentes/CabecalhoCadastro/CabecalhoCadastro';
-import { useCadastroUsuarioContexto } from '../../contexto/CadastroUsuario';
+import { Link } from 'componentes/Link/Link';
+import { Tipografia } from 'componentes/Tipografia/Tipografia';
+import CabecalhoCadastro from 'componentes/CabecalhoCadastro/CabecalhoCadastro';
+import { useCadastroUsuarioContexto } from 'contexto/CadastroUsuario';
 
 const SelecaoCliente = () => {
     const { setPerfil } = useCadastroUsuarioContexto();

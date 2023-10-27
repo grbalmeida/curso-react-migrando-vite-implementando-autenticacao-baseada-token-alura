@@ -1,8 +1,8 @@
 import { RouterProvider } from 'react-router-dom';
-import { router } from './router/router';
+import { router } from 'router/router';
 
-import { ProvedorTema } from './componentes/ProvedorTema/ProvedorTema';
-import { Estilos } from './componentes/EstilosGlobais/Estilos';
+import { ProvedorTema } from 'componentes/ProvedorTema/ProvedorTema';
+import { Estilos } from 'componentes/EstilosGlobais/Estilos';
 
 function App() {
   return (

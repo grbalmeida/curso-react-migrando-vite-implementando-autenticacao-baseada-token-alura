@@ -1,22 +1,22 @@
 import { Col, Container, Row } from 'react-grid-system';
 
-import { Cabecalho } from '../componentes/Cabecalho/Cabecalho';
-import { FreelandoLogo } from '../componentes/Icones/FreelandoLogo';
-import { Link } from '../componentes/Link/Link';
-import { CampoTexto } from '../componentes/CampoTexto/CampoTexto';
-import { ListaSuspensa } from '../componentes/ListaSuspensa/ListaSuspensa';
-import { Card } from '../componentes/Card/Card';
-import { Estilos } from '../componentes/EstilosGlobais/Estilos';
-import { ProvedorTema } from '../componentes/ProvedorTema/ProvedorTema';
-import { Tipografia } from '../componentes/Tipografia/Tipografia';
-import { Botao } from '../componentes/Botao/Botao';
-import { Rodape } from '../componentes/Rodape/Rodape';
-import { ListaInline } from '../componentes/Lista/ListaInline';
-import { ItemListaInline } from '../componentes/Lista/ItemListaInline';
-import { IconeWhatsApp } from '../componentes/Icones/IconeWhatsApp';
-import { IconeTwitch } from '../componentes/Icones/IconeTwitch';
-import { IconeInstagram } from '../componentes/Icones/IconeInstagram';
-import { IconeTwitter } from '../componentes/Icones/IconeTwitter';
+import { Cabecalho } from 'componentes/Cabecalho/Cabecalho';
+import { FreelandoLogo } from 'componentes/Icones/FreelandoLogo';
+import { Link } from 'componentes/Link/Link';
+import { CampoTexto } from 'componentes/CampoTexto/CampoTexto';
+import { ListaSuspensa } from 'componentes/ListaSuspensa/ListaSuspensa';
+import { Card } from 'componentes/Card/Card';
+import { Estilos } from 'componentes/EstilosGlobais/Estilos';
+import { ProvedorTema } from 'componentes/ProvedorTema/ProvedorTema';
+import { Tipografia } from 'componentes/Tipografia/Tipografia';
+import { Botao } from 'componentes/Botao/Botao';
+import { Rodape } from 'componentes/Rodape/Rodape';
+import { ListaInline } from 'componentes/Lista/ListaInline';
+import { ItemListaInline } from 'componentes/Lista/ItemListaInline';
+import { IconeWhatsApp } from 'componentes/Icones/IconeWhatsApp';
+import { IconeTwitch } from 'componentes/Icones/IconeTwitch';
+import { IconeInstagram } from 'componentes/Icones/IconeInstagram';
+import { IconeTwitter } from 'componentes/Icones/IconeTwitter';
 
 const estadosBrasileiros = [
   { "text": "Acre", "value": "AC" },

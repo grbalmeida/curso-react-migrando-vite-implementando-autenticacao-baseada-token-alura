@@ -1,7 +1,7 @@
 import { Outlet } from 'react-router-dom';
 import { Row, Col } from 'react-grid-system';
-import { Card } from '../../componentes/Card/Card';
-import { CadastroUsuarioProvider } from '../../contexto/CadastroUsuario';
+import { Card } from 'componentes/Card/Card';
+import { CadastroUsuarioProvider } from 'contexto/CadastroUsuario';
 
 const LayoutBaseCadastro = () => {
     return (
