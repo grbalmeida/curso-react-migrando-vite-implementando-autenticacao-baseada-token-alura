@@ -6,12 +6,17 @@ import LayoutBaseCadastro from 'paginas/cadastro/LayoutBaseCadastro';
 import LayoutBase from 'paginas/LayoutBase';
 import DadosPessoais from 'paginas/cadastro/DadosPessoais';
 import Concluido from 'paginas/cadastro/Concluido';
+import PaginaInicial from '../paginas/PaginaInicial';
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <LayoutBase />,
         children: [
+            {
+                path: '',
+                element: <PaginaInicial />
+            },
             {
                 path: 'cadastro',
                 element: <LayoutBaseCadastro />,
