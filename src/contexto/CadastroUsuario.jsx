@@ -1,5 +1,6 @@
 import { createContext, useContext, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const usuarioInicial = {
     perfil: '',
@@ -93,7 +94,11 @@ export const CadastroUsuarioProvider = ({ children }) => {
     };
 
     const submeterUsuario = () => {
-        navegar('/cadastro/concluido');
+        axios.post('http://localhost:8080/auth/register', usuario)
+            .then(() => navegar('/cadastro/concluido'))
+            .catch((erro) => {
+                console.error(erro);
+            });
     }
 
     const possoSelecionarInteresse = () => {
