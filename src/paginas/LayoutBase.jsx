@@ -13,7 +13,7 @@ import { IconeTwitch } from 'componentes/Icones/IconeTwitch';
 import { IconeInstagram } from 'componentes/Icones/IconeInstagram';
 import { IconeTwitter } from 'componentes/Icones/IconeTwitter';
 
-const LayoutBase = () => {
+const LayoutBase = ({ children }) => {
     return (
         <>
             <Cabecalho>
@@ -30,6 +30,7 @@ const LayoutBase = () => {
             </Cabecalho>
 
             <Outlet />
+            {children}
 
             <Rodape>
             <Container>

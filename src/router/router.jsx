@@ -6,12 +6,14 @@ import LayoutBaseCadastro from 'paginas/cadastro/LayoutBaseCadastro';
 import LayoutBase from 'paginas/LayoutBase';
 import DadosPessoais from 'paginas/cadastro/DadosPessoais';
 import Concluido from 'paginas/cadastro/Concluido';
-import PaginaInicial from '../paginas/PaginaInicial';
+import PaginaInicial from 'paginas/PaginaInicial';
+import Pagina404 from 'paginas/erros/Pagina404';
 
 export const router = createBrowserRouter([
     {
         path: '/',
         element: <LayoutBase />,
+        ErrorBoundary: Pagina404,
         children: [
             {
                 path: '',
