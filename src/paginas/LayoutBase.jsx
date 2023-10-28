@@ -1,4 +1,4 @@
-import { Outlet } from 'react-router-dom';
+import { Outlet, Link as RouterLink } from 'react-router-dom';
 import { Col, Container, Row } from 'react-grid-system';
 
 import { Cabecalho } from 'componentes/Cabecalho/Cabecalho';
@@ -23,7 +23,11 @@ const LayoutBase = ({ children }) => {
                         <FreelandoLogo />
                     </Col>
                     <Col style={{ textAlign: 'right' }}>
-                        <Link>Login</Link>
+                        <Link>
+                          <RouterLink to="/login">
+                            Login
+                          </RouterLink>
+                        </Link>
                     </Col>
                     </Row>
                 </Container>

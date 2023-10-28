@@ -8,6 +8,7 @@ import DadosPessoais from 'paginas/cadastro/DadosPessoais';
 import Concluido from 'paginas/cadastro/Concluido';
 import PaginaInicial from 'paginas/PaginaInicial';
 import Pagina404 from 'paginas/erros/Pagina404';
+import Login from 'paginas/Login/Login';
 
 export const router = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ export const router = createBrowserRouter([
             {
                 path: '',
                 element: <PaginaInicial />
+            },
+            {
+                path: 'login',
+                element: <Login />
             },
             {
                 path: 'cadastro',
