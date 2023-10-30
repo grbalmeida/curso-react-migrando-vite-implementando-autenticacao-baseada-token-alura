@@ -1,9 +1,9 @@
-import createContext, { useContext } from 'react';
-import axios from 'axios';
+import { createContext, useContext } from 'react';
+import http from '../http';
 
 const SessaoUsuarioContext = createContext({
     usuarioEstaLogado: false,
-    login: () => null,
+    login: (email, senha) => null,
     logout: () => null,
     perfil: {}
 });
@@ -15,8 +15,8 @@ export const useSessaoUsuarioContext = () => {
 export const SessaoUsuarioProvider = ({ children }) => {
 
     const login = (email, senha) => {
-        axios
-            .post('http://localhost:8080/auth/login', {
+        http
+            .post('auth/login', {
                 email,
                 senha
             })

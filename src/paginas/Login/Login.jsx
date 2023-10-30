@@ -3,6 +3,7 @@ import { Link as RouterLink } from 'react-router-dom';
 import styled from '@emotion/styled';
 import { Col, Container, Row } from 'react-grid-system';
 
+import { useSessaoUsuarioContext } from 'contexto/SessaoUsuario';
 import { Botao } from 'componentes/Botao/Botao';
 import { CampoTexto } from 'componentes/CampoTexto/CampoTexto';
 import { Card } from 'componentes/Card/Card';
@@ -21,8 +22,11 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [senha, setSenha] = useState('');
 
-    const tentarEfetuarLogin = async (evento) => {
+    const { login } = useSessaoUsuarioContext();
 
+    const tentarEfetuarLogin = async (evento) => {
+        evento.preventDefault();
+        login(email, senha);
     }
 
     return (

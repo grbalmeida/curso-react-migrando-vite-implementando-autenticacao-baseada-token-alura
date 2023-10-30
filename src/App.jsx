@@ -1,6 +1,7 @@
 import { RouterProvider } from 'react-router-dom';
 import { router } from 'router/router';
 
+import { SessaoUsuarioProvider } from 'contexto/SessaoUsuario';
 import { ProvedorTema } from 'componentes/ProvedorTema/ProvedorTema';
 import { Estilos } from 'componentes/EstilosGlobais/Estilos';
 
@@ -8,7 +9,9 @@ function App() {
   return (
     <ProvedorTema>
       <Estilos />
-      <RouterProvider router={router} />
+      <SessaoUsuarioProvider>
+        <RouterProvider router={router} />
+      </SessaoUsuarioProvider>
     </ProvedorTema>
   )
 }
