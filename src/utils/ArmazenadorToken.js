@@ -7,11 +7,11 @@ export class ArmazenadorToken {
         sessionStorage.setItem(REFRESH_TOKEN_KEY, refreshToken);
     }
 
-    static accessToken() {
+    static get accessToken() {
         return sessionStorage.getItem(ACCESS_TOKEN_KEY);
     }
 
-    static refreshToken() {
+    static get refreshToken() {
         return sessionStorage.getItem(REFRESH_TOKEN_KEY);
     }
 }

@@ -2,8 +2,6 @@ import { useEffect } from 'react';
 import styled from '@emotion/styled';
 import { Container, Row, Col } from 'react-grid-system';
 
-import { ArmazenadorToken } from 'utils/ArmazenadorToken';
-
 import { Card } from 'componentes/Card/Card';
 import { Tipografia } from 'componentes/Tipografia/Tipografia';
 import { CampoTexto } from 'componentes/CampoTexto/CampoTexto';
@@ -32,13 +30,8 @@ const ImgEstilizada = styled.img`
 const Perfil = () => {
 
     useEffect(() => {
-        const token = ArmazenadorToken.accessToken();
     
-        http.get('profile', {
-            headers: {
-                'Authorization': `Bearer ${token}`
-            }
-        })
+        http.get('profile')
             .then(resposta => console.log(resposta.data))
             .catch(erro => console.error(erro));
     }, []);
