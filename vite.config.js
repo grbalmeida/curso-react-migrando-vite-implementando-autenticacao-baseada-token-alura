@@ -10,6 +10,7 @@ export default defineConfig({
       contexto: "/src/contexto",
       paginas: "/src/paginas",
       router: "/src/router",
+      utils: "/src/utils",
     }
   }
 })
