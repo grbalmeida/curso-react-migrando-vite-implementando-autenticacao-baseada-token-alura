@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import styled from '@emotion/styled';
 import { Container, Row, Col } from 'react-grid-system';
 
@@ -8,6 +9,8 @@ import { Botao } from 'componentes/Botao/Botao';
 
 import avatar from './assets/avatar.png';
 import background from './assets/perfil-bg.png';
+
+import http from '../../http';
 
 const TituloEstilizado = styled.h1`
     background: url(${background}) no-repeat;
@@ -25,6 +28,12 @@ const ImgEstilizada = styled.img`
 `;
 
 const Perfil = () => {
+
+    useEffect(() => {
+        http.get('profile')
+            .then(resposta => console.log(resposta.data))
+            .catch(erro => console.error(erro));
+    }, []);
 
     const aoSubmeterForm = (evento) => {
         evento.preventDefault();
