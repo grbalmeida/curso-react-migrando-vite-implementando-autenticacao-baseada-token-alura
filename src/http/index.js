@@ -26,6 +26,28 @@ const rotasIgnoradasPelosErros = [
     'auth/refresh',
 ];
 
+const tentaRenovarToken = async () => {
+    const token = ArmazenadorToken.refreshToken;
+
+    return axios.get('http://localhost:8080/auth/refresh', {
+        header: {
+            Authorization: `Bearer ${token}`
+        }
+    }).then(resposta => {
+        ArmazenadorToken.definirTokens(
+            resposta.data.access_token,
+            resposta.data.refresh_token
+        );
+    });
+};
+
+const lidarComErro401 = async (erro) => {
+    await tentaRenovarToken()
+        .then(() => http(erro.config));
+
+    return Promise.reject(erro);
+};
+
 // Adicionar um interceptador da resposta
 axios.interceptors.response.use(
     response => response,
