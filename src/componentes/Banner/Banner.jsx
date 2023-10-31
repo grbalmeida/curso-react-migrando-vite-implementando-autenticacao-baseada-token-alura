@@ -24,7 +24,7 @@ const Banner = () => {
                     <Col md={5} sm={12}>
                         <figcaption>
                             <Tipografia componente="h1" variante="h1">
-                            Uma ponte entre os freelas mais talentosos e os projetos mais interessantes!
+                                Uma ponte entre os freelas mais talentosos e os projetos mais interessantes!
                             </Tipografia>
                         </figcaption>
                         <RouterLink to="/cadastro">
