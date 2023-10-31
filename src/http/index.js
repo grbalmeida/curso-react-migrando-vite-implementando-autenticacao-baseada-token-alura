@@ -21,4 +21,22 @@ http.interceptors.request.use(function (config) {
     return Promise.reject(error);
 });
 
+const rotasIgnoradasPelosErros = [
+    'auth/login',
+    'auth/refresh',
+];
+
+// Adicionar um interceptador da resposta
+axios.interceptors.response.use(
+    response => response,
+    function (error) {
+
+        if (!rotasIgnoradasPelosErros.includes(error.config.url) && error.response.status === 401) {
+            return lidarComErro401(error);
+        }
+
+        return Promise.reject(error);
+    }
+);
+
 export default http;
