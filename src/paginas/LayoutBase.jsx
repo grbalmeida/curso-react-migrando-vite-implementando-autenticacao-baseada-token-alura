@@ -1,6 +1,7 @@
 import { Outlet, Link as RouterLink } from 'react-router-dom';
 import { Col, Container, Row } from 'react-grid-system';
 
+import { ArmazenadorToken } from 'utils/ArmazenadorToken';
 import { Cabecalho } from 'componentes/Cabecalho/Cabecalho';
 import { FreelandoLogo } from 'componentes/Icones/FreelandoLogo';
 import { Link } from 'componentes/Link/Link';
@@ -28,6 +29,9 @@ const LayoutBase = ({ children }) => {
                             Login
                           </RouterLink>
                         </Link>
+                    </Col>
+                    <Col style={{ textAlign: 'right' }}>
+                      <Link onClick={() => ArmazenadorToken.efetuarLogout()}>Logout</Link>
                     </Col>
                     </Row>
                 </Container>
